@@ -9,7 +9,6 @@ import edu.iut.app.ApplicationSession;
 
 public class WeekPanel extends EventPanel {
 
-	// Exercice 4
 	public enum WeekDayNames {
 		EMPTYDAY("",""),
 		MONDAY(ApplicationSession.instance().getString("monday"),ApplicationSession.instance().getString("mon")),
@@ -19,7 +18,7 @@ public class WeekPanel extends EventPanel {
 		FRIDAY(ApplicationSession.instance().getString("friday"),ApplicationSession.instance().getString("fri")),
 		SATURDAY(ApplicationSession.instance().getString("saturday"),ApplicationSession.instance().getString("sat")),
 		SUNDAY(ApplicationSession.instance().getString("sunday"),ApplicationSession.instance().getString("sun"));
-				
+		
 		private String name;
 		private String shortName;
 		
@@ -41,7 +40,7 @@ public class WeekPanel extends EventPanel {
 		super(ActiveView.WEEK_VIEW);
 		GridLayout daysOfWeekLayout = new GridLayout(1,7);		
 		this.setLayout(daysOfWeekLayout);
-		for (int di = 0;di<8;di++)	{
+		for (int di = 0;di<7;di++)	{
 			this.add(new DayPanel(ActiveView.WEEK_VIEW,WeekDayNames.values()[di+1]));
 		}
 	}
